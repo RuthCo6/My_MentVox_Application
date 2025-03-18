@@ -1,0 +1,4 @@
+C:\Users\USER\Desktop\תכנות שנה ב יוצאים לדרך\MentVox_Application!.Api\MentVox.Core\obj\Debug\net7.0\MentVox.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Desktop\תכנות שנה ב יוצאים לדרך\MentVox_Application!.Api\MentVox.Core\obj\Debug\net7.0\MentVox.Core.AssemblyInfoInputs.cache
+C:\Users\USER\Desktop\תכנות שנה ב יוצאים לדרך\MentVox_Application!.Api\MentVox.Core\obj\Debug\net7.0\MentVox.Core.AssemblyInfo.cs
+C:\Users\USER\Desktop\תכנות שנה ב יוצאים לדרך\MentVox_Application!.Api\MentVox.Core\obj\Debug\net7.0\MentVox.Core.csproj.CoreCompileInputs.cache

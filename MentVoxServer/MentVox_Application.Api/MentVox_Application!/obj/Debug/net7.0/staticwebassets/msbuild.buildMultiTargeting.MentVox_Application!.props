@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MentVox_Application!.props" />
+</Project>

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "EIM7nxUQI1vjEwPsSP/MyP28M7AsUfXcqxPmcNbdWZQRL76nWTAAYFWuOMKT7ywM7/v+9QuL2KngSLUo4plO1A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\USER\\Desktop\\תכנות שנה ב יוצאים לדרך\\MentVox_Application!.Api\\MentVox.Core\\MentVox.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\10.0.0-preview.1.25081.1\\microsoft.entityframeworkcore.tools.10.0.0-preview.1.25081.1.nupkg.sha512"
+  ],
+  "logs": []
+}
