@@ -16,70 +16,76 @@ namespace MentVox_Application_.Controllers
             _whisperService = whisperService;
         }
 
-        // GET: ConversationController/Details/5
-        public ActionResult Details(int id)
+        [HttpGet]
+        public IActionResult GetAll()
         {
-            return View();
+            var items = _whisperService.GetAllConvers();
+            return Ok(items);
         }
 
-        // GET: ConversationController/Create
-        public ActionResult Create()
+        [HttpGet("{id}")]
+        public IActionResult GetById(int id)
         {
-            return View();
+            var item = _whisperService.GetConversById(id);
+            if (item == null)
+            {
+                return NotFound();
+            }
+            return Ok(item);
         }
 
-        // POST: ConversationController/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public IActionResult Create([FromBody] ConversationController convers)
         {
-            try
+            if (convers == null)
             {
-                return RedirectToAction(nameof(Index));
+                return BadRequest();
             }
-            catch
-            {
-                return View();
-            }
+            _whisperService.CreateConvers(convers);
+            return CreatedAtAction(nameof(GetById), new { id = convers.Id }, convers);
         }
 
-        // GET: ConversationController/Edit/5
-        public ActionResult Edit(int id)
+        [HttpPut("{id}")]
+        public IActionResult Update(int id, [FromBody] ConversationController convers)
         {
-            return View();
-        }
-
-        // POST: ConversationController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
+            if (convers == null || convers.Id != id)
             {
-                return RedirectToAction(nameof(Index));
+                return BadRequest();
             }
-            catch
+
+            var existingItem = _whisperService.GetConversById(id);
+            if (existingItem == null)
             {
-                return View();
+                return NotFound();
             }
+
+            _whisperService.UpdateConvers(convers);
+            return NoContent();
         }
 
-        // GET: ConversationController/Delete/5
-        public ActionResult Delete(int id)
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
         {
-            return View();
-        }
+            var item = _whisperService.GetConversById(id);
+            if (item == null)
+            {
+                return NotFound();
+            }
 
-        [HttpPost("transcribe")]
-        public async Task<IActionResult> TranscribeAudio(IFormFile audioFile)
-        {
-            if (audioFile == null || audioFile.Length == 0)
-                return BadRequest("No file provided.");
-
-            using var stream = audioFile.OpenReadStream();
-            var transcription = await _whisperService.TranscribeAudioAsync(stream, audioFile.FileName);
-
-            return Ok(new WhisperResponseDto { Transcription = transcription });
+            _whisperService.DeleteConvers(id);
+            return NoContent();
         }
     }
+
+    //[HttpPost("transcribe")]
+    //public async Task<IActionResult> TranscribeAudio(IFormFile audioFile)
+    //{
+    //    if (audioFile == null || audioFile.Length == 0)
+    //        return BadRequest("No file provided.");
+
+    //    using var stream = audioFile.OpenReadStream();
+    //    var transcription = await _whisperService.TranscribeAudioAsync(stream, audioFile.FileName);
+
+    //    return Ok(new WhisperResponseDto { Transcription = transcription });
+    //}
 }

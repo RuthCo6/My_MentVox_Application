@@ -23,6 +23,16 @@ namespace MentVox.Service.Services
             _apiKey = configuration["OpenAIApiKey"];
         }
 
+
+        public IEnumerable<Item> GetAllItems() => _httpClient.GetAll();
+
+        public Item GetItemById(int id) => _httpClient.GetById(id);
+
+        public void CreateItem(Item item) => _httpClient.Add(item);
+
+        public void UpdateItem(Item item) => _httpClient.Update(item);
+
+        public void DeleteItem(int id) => _httpClient.Delete(id);
         public async Task<ChatGptResponseDto> GetChatResponseAsync(string inputText)
         {
             var requestBody = new

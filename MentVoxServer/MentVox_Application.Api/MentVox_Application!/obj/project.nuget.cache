@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "i3WzWkuzuJgK46tCtzV6AerYu96NCwjC2H9+K0wEzCEPpYfQ0O2S65warHAryhRiPUYf3pQ+lvQgaI1BJJbouA==",
+  "dgSpecHash": "XKRrQiQHvNCe83sT4MC+3fZ35QnGzY8v7jkEMBmSEOeEaq/TWxsSKoS9pl3Gw15aE0uWep6ZwISJYnM1BQaWIg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\USER\\Desktop\\תכנות שנה ב יוצאים לדרך\\MentVox_Application!.Api\\MentVox_Application!\\MentVox_Application!.csproj",
+  "projectFilePath": "C:\\Users\\USER\\Desktop\\תכנות שנה ב יוצאים לדרך\\fullstack-application\\MentVoxServer\\MentVox_Application.Api\\MentVox_Application!\\MentVox_Application!.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.10\\microsoft.aspnetcore.openapi.7.0.10.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\10.0.0-preview.1.25081.1\\microsoft.entityframeworkcore.tools.10.0.0-preview.1.25081.1.nupkg.sha512",

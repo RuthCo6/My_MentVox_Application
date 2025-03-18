@@ -7,11 +7,42 @@ namespace VirtualAdvisorAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UsersController : ControllerBase
+using Microsoft.AspNetCore.Mvc;
+    using System.Threading.Tasks;
+
+    namespace VirtualAdvisorAPI.Controllers
+    {
+        [Route("api/[controller]")]
+        [ApiController]
+        public class WhisperController : ControllerBase
+        {
+            private readonly IWhisperService _whisperService;
+
+            public WhisperController(IWhisperService whisperService)
+            {
+                _whisperService = whisperService;
+            }
+
+            // POST: api/whisper/transcribe
+            [HttpPost("transcribe")]
+            public async Task<ActionResult<string>> TranscribeAudio([FromForm] IFormFile audioFile)
+            {
+                if (audioFile == null || audioFile.Length == 0)
+                {
+                    return BadRequest("Invalid audio file.");
+                }
+
+                var transcription = await _whisperService.TranscribeAudioAsync(audioFile);
+                return Ok(transcription);
+            }
+        }
+    }
+
+    public class WhispersController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
 
-        public UsersController(ApplicationDbContext context)
+        public WhispersController(ApplicationDbContext context)
         {
             _context = context;
         }

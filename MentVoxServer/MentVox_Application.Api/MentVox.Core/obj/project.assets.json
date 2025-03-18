@@ -46,11 +46,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USER\\Desktop\\תכנות שנה ב יוצאים לדרך\\MentVox_Application!.Api\\MentVox.Core\\MentVox.Core.csproj",
+      "projectUniqueName": "C:\\Users\\USER\\Desktop\\תכנות שנה ב יוצאים לדרך\\fullstack-application\\MentVoxServer\\MentVox_Application.Api\\MentVox.Core\\MentVox.Core.csproj",
       "projectName": "MentVox.Core",
-      "projectPath": "C:\\Users\\USER\\Desktop\\תכנות שנה ב יוצאים לדרך\\MentVox_Application!.Api\\MentVox.Core\\MentVox.Core.csproj",
+      "projectPath": "C:\\Users\\USER\\Desktop\\תכנות שנה ב יוצאים לדרך\\fullstack-application\\MentVoxServer\\MentVox_Application.Api\\MentVox.Core\\MentVox.Core.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USER\\Desktop\\תכנות שנה ב יוצאים לדרך\\MentVox_Application!.Api\\MentVox.Core\\obj\\",
+      "outputPath": "C:\\Users\\USER\\Desktop\\תכנות שנה ב יוצאים לדרך\\fullstack-application\\MentVoxServer\\MentVox_Application.Api\\MentVox.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

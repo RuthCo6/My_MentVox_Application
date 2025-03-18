@@ -520,11 +520,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USER\\Desktop\\תכנות שנה ב יוצאים לדרך\\MentVox_Application!.Api\\MentVox_Application!\\MentVox_Application!.csproj",
+      "projectUniqueName": "C:\\Users\\USER\\Desktop\\תכנות שנה ב יוצאים לדרך\\fullstack-application\\MentVoxServer\\MentVox_Application.Api\\MentVox_Application!\\MentVox_Application!.csproj",
       "projectName": "MentVox_Application!",
-      "projectPath": "C:\\Users\\USER\\Desktop\\תכנות שנה ב יוצאים לדרך\\MentVox_Application!.Api\\MentVox_Application!\\MentVox_Application!.csproj",
+      "projectPath": "C:\\Users\\USER\\Desktop\\תכנות שנה ב יוצאים לדרך\\fullstack-application\\MentVoxServer\\MentVox_Application.Api\\MentVox_Application!\\MentVox_Application!.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USER\\Desktop\\תכנות שנה ב יוצאים לדרך\\MentVox_Application!.Api\\MentVox_Application!\\obj\\",
+      "outputPath": "C:\\Users\\USER\\Desktop\\תכנות שנה ב יוצאים לדרך\\fullstack-application\\MentVoxServer\\MentVox_Application.Api\\MentVox_Application!\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -546,8 +546,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\USER\\Desktop\\תכנות שנה ב יוצאים לדרך\\MentVox_Application!.Api\\MentVox.Core\\MentVox.Core.csproj": {
-              "projectPath": "C:\\Users\\USER\\Desktop\\תכנות שנה ב יוצאים לדרך\\MentVox_Application!.Api\\MentVox.Core\\MentVox.Core.csproj"
+            "C:\\Users\\USER\\Desktop\\תכנות שנה ב יוצאים לדרך\\fullstack-application\\MentVoxServer\\MentVox_Application.Api\\MentVox.Core\\MentVox.Core.csproj": {
+              "projectPath": "C:\\Users\\USER\\Desktop\\תכנות שנה ב יוצאים לדרך\\fullstack-application\\MentVoxServer\\MentVox_Application.Api\\MentVox.Core\\MentVox.Core.csproj"
             }
           }
         }

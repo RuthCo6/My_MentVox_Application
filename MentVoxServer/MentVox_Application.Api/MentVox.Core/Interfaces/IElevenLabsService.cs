@@ -9,5 +9,6 @@ namespace MentVox.Core.Interfaces
     public class IElevenLabsService
     {
         Task<Stream> TextToSpeechAsync(string text);
+
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2IK+jIHtg9d3zt37y14nFzIavlAomoJQrEM8DgPxp96GT/jlRya9Sq2WIb1CUErjpymkGwWmNvwTxrmZcD2SkQ==",
+  "dgSpecHash": "5cNc/pUbTP2oPVSUKR3MRxd2+yKEIMWfEXqCMSBHOYna7Rp+OLw3uMJOrmzTwgIjv04Hh1hkBNwWc6ZyTwZNEA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\USER\\Desktop\\תכנות שנה ב יוצאים לדרך\\MentVox_Application!.Api\\MentVox.Service\\MentVox.Service.csproj",
+  "projectFilePath": "C:\\Users\\USER\\Desktop\\תכנות שנה ב יוצאים לדרך\\fullstack-application\\MentVoxServer\\MentVox_Application.Api\\MentVox.Service\\MentVox.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\10.0.0-preview.1.25081.1\\microsoft.entityframeworkcore.tools.10.0.0-preview.1.25081.1.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\10.0.0-preview.1.25080.5\\microsoft.extensions.configuration.abstractions.10.0.0-preview.1.25080.5.nupkg.sha512",
