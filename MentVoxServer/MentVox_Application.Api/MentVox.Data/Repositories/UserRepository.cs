@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MentVox.Core.Repositories;
+using DevExpress.Data.Browsing;
 
 namespace MentVox.Data.Repositories
 {
@@ -18,16 +19,16 @@ namespace MentVox.Data.Repositories
             _context = context;
         }
 
-        public User GetUserById(int id)
-        {
-            return _context.Users.Find(id);
-        }
+        //public User GetUserById(int id)
+        //{
+        //    return _context.Users.Find(id);
+        //}
 
-        public void AddUser(User user)
-        {
-            _context.Users.Add(user);
-            _context.SaveChanges();
-        }
+        //public void AddUser(User user)
+        //{
+        //    _context.Users.Add(user);
+        //    _context.SaveChanges();
+        //}
 
         // מימוש פעולות נוספות
     }

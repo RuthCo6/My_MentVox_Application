@@ -9,7 +9,13 @@ namespace MentVox.Core.Repositories
 {
     public class ConversationRepository
     {
-        ConversationRepository GetUserById(int id);
-        void AddUser(User user);
+        ConversationRepository GetUserById(int id)
+        {
+            throw new NotImplementedException();
+        }
+        void AddUser(User user)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

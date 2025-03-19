@@ -1,4 +1,5 @@
 ﻿using MentVox.Core.Interfaces;
+using MentVox.Core.Models;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using System;
@@ -7,11 +8,11 @@ using System.Linq;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
-using static MentVox.Service.Services.ElevenLabsService;
+
 
 namespace MentVox.Service.Services
 {
-    internal class ElevenLabsService : IElevenLabsService
+    public class ElevenLabsService : IElevenLabsService
     {
 
         private readonly HttpClient _httpClient;
@@ -21,6 +22,11 @@ namespace MentVox.Service.Services
         {
             _httpClient = httpClient;
             _apiKey = configuration["ElevenLabsApiKey"];
+        }
+
+        public Task<byte[]> SynthesizeAudio(ElevenLabs request)
+        {
+            throw new NotImplementedException();
         }
 
         public async Task<Stream> TextToSpeechAsync(string text)

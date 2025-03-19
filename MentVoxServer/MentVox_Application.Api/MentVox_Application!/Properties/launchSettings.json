@@ -36,9 +36,6 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
-    },
-    "ConnectionStrings": {
-      "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=VirtualAdvisorDB;Trusted_Connection=True;MultipleActiveResultSets=true"
     }
   }
 }

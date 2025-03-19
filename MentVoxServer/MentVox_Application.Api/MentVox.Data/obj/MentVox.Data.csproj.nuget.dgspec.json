@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USER\\Desktop\\תכנות שנה ב יוצאים לדרך\\fullstack-application\\MentVoxServer\\MentVox_Application.Api\\MentVox.Data\\MentVox.Data.csproj": {}
+    "C:\\Users\\USER\\Downloads\\Mentvox_Application-master\\Mentvox_Application-master\\MentVoxServer\\MentVox_Application.Api\\MentVox.Data\\MentVox.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USER\\Desktop\\תכנות שנה ב יוצאים לדרך\\fullstack-application\\MentVoxServer\\MentVox_Application.Api\\MentVox.Core\\MentVox.Core.csproj": {
+    "C:\\Users\\USER\\Downloads\\Mentvox_Application-master\\Mentvox_Application-master\\MentVoxServer\\MentVox_Application.Api\\MentVox.Core\\MentVox.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\Desktop\\תכנות שנה ב יוצאים לדרך\\fullstack-application\\MentVoxServer\\MentVox_Application.Api\\MentVox.Core\\MentVox.Core.csproj",
+        "projectUniqueName": "C:\\Users\\USER\\Downloads\\Mentvox_Application-master\\Mentvox_Application-master\\MentVoxServer\\MentVox_Application.Api\\MentVox.Core\\MentVox.Core.csproj",
         "projectName": "MentVox.Core",
-        "projectPath": "C:\\Users\\USER\\Desktop\\תכנות שנה ב יוצאים לדרך\\fullstack-application\\MentVoxServer\\MentVox_Application.Api\\MentVox.Core\\MentVox.Core.csproj",
+        "projectPath": "C:\\Users\\USER\\Downloads\\Mentvox_Application-master\\Mentvox_Application-master\\MentVoxServer\\MentVox_Application.Api\\MentVox.Core\\MentVox.Core.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\Desktop\\תכנות שנה ב יוצאים לדרך\\fullstack-application\\MentVoxServer\\MentVox_Application.Api\\MentVox.Core\\obj\\",
+        "outputPath": "C:\\Users\\USER\\Downloads\\Mentvox_Application-master\\Mentvox_Application-master\\MentVoxServer\\MentVox_Application.Api\\MentVox.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,6 +45,26 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -72,14 +92,14 @@
         }
       }
     },
-    "C:\\Users\\USER\\Desktop\\תכנות שנה ב יוצאים לדרך\\fullstack-application\\MentVoxServer\\MentVox_Application.Api\\MentVox.Data\\MentVox.Data.csproj": {
+    "C:\\Users\\USER\\Downloads\\Mentvox_Application-master\\Mentvox_Application-master\\MentVoxServer\\MentVox_Application.Api\\MentVox.Data\\MentVox.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\Desktop\\תכנות שנה ב יוצאים לדרך\\fullstack-application\\MentVoxServer\\MentVox_Application.Api\\MentVox.Data\\MentVox.Data.csproj",
+        "projectUniqueName": "C:\\Users\\USER\\Downloads\\Mentvox_Application-master\\Mentvox_Application-master\\MentVoxServer\\MentVox_Application.Api\\MentVox.Data\\MentVox.Data.csproj",
         "projectName": "MentVox.Data",
-        "projectPath": "C:\\Users\\USER\\Desktop\\תכנות שנה ב יוצאים לדרך\\fullstack-application\\MentVoxServer\\MentVox_Application.Api\\MentVox.Data\\MentVox.Data.csproj",
+        "projectPath": "C:\\Users\\USER\\Downloads\\Mentvox_Application-master\\Mentvox_Application-master\\MentVoxServer\\MentVox_Application.Api\\MentVox.Data\\MentVox.Data.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\Desktop\\תכנות שנה ב יוצאים לדרך\\fullstack-application\\MentVoxServer\\MentVox_Application.Api\\MentVox.Data\\obj\\",
+        "outputPath": "C:\\Users\\USER\\Downloads\\Mentvox_Application-master\\Mentvox_Application-master\\MentVoxServer\\MentVox_Application.Api\\MentVox.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -101,8 +121,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\USER\\Desktop\\תכנות שנה ב יוצאים לדרך\\fullstack-application\\MentVoxServer\\MentVox_Application.Api\\MentVox.Core\\MentVox.Core.csproj": {
-                "projectPath": "C:\\Users\\USER\\Desktop\\תכנות שנה ב יוצאים לדרך\\fullstack-application\\MentVoxServer\\MentVox_Application.Api\\MentVox.Core\\MentVox.Core.csproj"
+              "C:\\Users\\USER\\Downloads\\Mentvox_Application-master\\Mentvox_Application-master\\MentVoxServer\\MentVox_Application.Api\\MentVox.Core\\MentVox.Core.csproj": {
+                "projectPath": "C:\\Users\\USER\\Downloads\\Mentvox_Application-master\\Mentvox_Application-master\\MentVoxServer\\MentVox_Application.Api\\MentVox.Core\\MentVox.Core.csproj"
               }
             }
           }
@@ -117,6 +137,18 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "DevExpress.Data": {
+              "target": "Package",
+              "version": "[20.1.10, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",

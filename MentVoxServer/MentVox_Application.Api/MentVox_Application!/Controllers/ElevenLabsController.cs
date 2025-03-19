@@ -1,11 +1,12 @@
 ﻿using MentVox.Core.Interfaces;
+using MentVox.Core.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
 namespace VirtualAdvisorAPI.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class ElevenLabsController : ControllerBase
     {
         private readonly IElevenLabsService _elevenLabsService;
@@ -17,15 +18,21 @@ namespace VirtualAdvisorAPI.Controllers
 
         // POST: api/elevenlabs/synthesize
         [HttpPost("synthesize")]
-        public async Task<IActionResult> SynthesizeSpeech([FromBody] SynthesizeRequest request)
+        public async Task<IActionResult> SynthesizeSpeech([FromBody] ElevenLabs request)
         {
-            if (request == null || string.IsNullOrEmpty(request.Text))
+            if (request == null || string.IsNullOrEmpty(request.TextToSynthesize))
             {
                 return BadRequest("Invalid request.");
             }
 
-            var audioStream = await _elevenLabsService.SynthesizeSpeechAsync(request.Text);
-            return File(audioStream, "audio/mpeg");
+            var audioBytes = await _elevenLabsService.SynthesizeAudio(request);
+            if (audioBytes == null || audioBytes.Length == 0)
+            {
+                return StatusCode(500, "Error generating audio.");
+            }
+
+            return File(audioBytes, request.AudioFormat ?? "audio/mpeg");
         }
+
     }
 }

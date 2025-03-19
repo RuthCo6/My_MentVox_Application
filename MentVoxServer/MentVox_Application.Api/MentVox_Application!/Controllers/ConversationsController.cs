@@ -1,5 +1,6 @@
 ﻿using MentVox.Core.DTOs;
 using MentVox.Core.Interfaces;
+using MentVox.Core.Models.ConversationModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -35,20 +36,20 @@ namespace MentVox_Application_.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create([FromBody] ConversationController convers)
+        public IActionResult Create([FromBody] Conversation convers)
         {
             if (convers == null)
             {
                 return BadRequest();
             }
             _whisperService.CreateConvers(convers);
-            return CreatedAtAction(nameof(GetById), new { id = convers.Id }, convers);
+            return CreatedAtAction(nameof(GetById), new { id = convers.UserId }, convers);
         }
 
         [HttpPut("{id}")]
-        public IActionResult Update(int id, [FromBody] ConversationController convers)
+        public IActionResult Update(int id, [FromBody] Conversation convers)
         {
-            if (convers == null || convers.Id != id)
+            if (convers == null || convers.UserId != id)
             {
                 return BadRequest();
             }

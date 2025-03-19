@@ -1,5 +1,6 @@
 ﻿using MentVox.Core.DTOs;
 using MentVox.Core.Interfaces;
+using MentVox.Core.Models.ConversationModels;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using System;
@@ -16,23 +17,25 @@ namespace MentVox.Service.Services
     {
         private readonly HttpClient _httpClient;
         private readonly string _apiKey;
+        private readonly ConversationService _conversationService;
 
-        public ChatGptService(HttpClient httpClient, IConfiguration configuration)
+        public ChatGptService(HttpClient httpClient, IConfiguration configuration,ConversationService conversationService)
         {
             _httpClient = httpClient;
             _apiKey = configuration["OpenAIApiKey"];
+            _conversationService = conversationService;
         }
 
+        public IEnumerable<Conversation> GetAllConvers() => _conversationService.GetAll();
 
-        public IEnumerable<Item> GetAllItems() => _httpClient.GetAll();
+        public Conversation GetConversById(int id) => _conversationService.GetById(id);
 
-        public Item GetItemById(int id) => _httpClient.GetById(id);
+        public void CreateConvers(Conversation convers) => _conversationService.Add(convers);
 
-        public void CreateItem(Item item) => _httpClient.Add(item);
+        public void Update(Conversation convers) => _conversationService.Update(convers);
 
-        public void UpdateItem(Item item) => _httpClient.Update(item);
+        public void Delete(int id) => _conversationService.Delete(id);
 
-        public void DeleteItem(int id) => _httpClient.Delete(id);
         public async Task<ChatGptResponseDto> GetChatResponseAsync(string inputText)
         {
             var requestBody = new

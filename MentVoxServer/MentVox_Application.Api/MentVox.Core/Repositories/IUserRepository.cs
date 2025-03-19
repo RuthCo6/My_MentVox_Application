@@ -9,8 +9,11 @@ namespace MentVox.Core.Repositories
 {
     public class IUserRepository
     {
-        User GetUserById(int id);
-        void AddUser(User user);
+        User GetUserById(int id)
+        {
+            throw null;
+        }
+        void AddUser(User user) { }
 
     }
 }

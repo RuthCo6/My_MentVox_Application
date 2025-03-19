@@ -1,0 +1,15 @@
+C:\Users\USER\Downloads\Mentvox_Application-master\Mentvox_Application-master\MentVoxServer\MentVox_Application.Api\MentVox.Service\bin\Debug\net7.0\MentVox.Service.deps.json
+C:\Users\USER\Downloads\Mentvox_Application-master\Mentvox_Application-master\MentVoxServer\MentVox_Application.Api\MentVox.Service\bin\Debug\net7.0\MentVox.Service.dll
+C:\Users\USER\Downloads\Mentvox_Application-master\Mentvox_Application-master\MentVoxServer\MentVox_Application.Api\MentVox.Service\bin\Debug\net7.0\MentVox.Service.pdb
+C:\Users\USER\Downloads\Mentvox_Application-master\Mentvox_Application-master\MentVoxServer\MentVox_Application.Api\MentVox.Service\bin\Debug\net7.0\MentVox.Core.dll
+C:\Users\USER\Downloads\Mentvox_Application-master\Mentvox_Application-master\MentVoxServer\MentVox_Application.Api\MentVox.Service\bin\Debug\net7.0\MentVox.Core.pdb
+C:\Users\USER\Downloads\Mentvox_Application-master\Mentvox_Application-master\MentVoxServer\MentVox_Application.Api\MentVox.Service\obj\Debug\net7.0\MentVox.Service.csproj.AssemblyReference.cache
+C:\Users\USER\Downloads\Mentvox_Application-master\Mentvox_Application-master\MentVoxServer\MentVox_Application.Api\MentVox.Service\obj\Debug\net7.0\MentVox.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Downloads\Mentvox_Application-master\Mentvox_Application-master\MentVoxServer\MentVox_Application.Api\MentVox.Service\obj\Debug\net7.0\MentVox.Service.AssemblyInfoInputs.cache
+C:\Users\USER\Downloads\Mentvox_Application-master\Mentvox_Application-master\MentVoxServer\MentVox_Application.Api\MentVox.Service\obj\Debug\net7.0\MentVox.Service.AssemblyInfo.cs
+C:\Users\USER\Downloads\Mentvox_Application-master\Mentvox_Application-master\MentVoxServer\MentVox_Application.Api\MentVox.Service\obj\Debug\net7.0\MentVox.Service.csproj.CoreCompileInputs.cache
+C:\Users\USER\Downloads\Mentvox_Application-master\Mentvox_Application-master\MentVoxServer\MentVox_Application.Api\MentVox.Service\obj\Debug\net7.0\MentVox.Service.csproj.CopyComplete
+C:\Users\USER\Downloads\Mentvox_Application-master\Mentvox_Application-master\MentVoxServer\MentVox_Application.Api\MentVox.Service\obj\Debug\net7.0\MentVox.Service.dll
+C:\Users\USER\Downloads\Mentvox_Application-master\Mentvox_Application-master\MentVoxServer\MentVox_Application.Api\MentVox.Service\obj\Debug\net7.0\refint\MentVox.Service.dll
+C:\Users\USER\Downloads\Mentvox_Application-master\Mentvox_Application-master\MentVoxServer\MentVox_Application.Api\MentVox.Service\obj\Debug\net7.0\MentVox.Service.pdb
+C:\Users\USER\Downloads\Mentvox_Application-master\Mentvox_Application-master\MentVoxServer\MentVox_Application.Api\MentVox.Service\obj\Debug\net7.0\ref\MentVox.Service.dll

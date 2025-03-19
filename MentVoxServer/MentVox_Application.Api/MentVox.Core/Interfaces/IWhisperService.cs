@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MentVox.Core.Models.ConversationModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,14 +7,13 @@ using System.Threading.Tasks;
 
 namespace MentVox.Core.Interfaces
 {
-    public class IWhisperService
+    public interface IWhisperService
     {
-        public Task<string> TranscribeAudioAsync(Stream stream, string fileName)
-        {
-            throw new NotImplementedException();
-        }
-
-        Task<string> TranscribeAudioAsync(Stream audioStream,
-            string fileName);
+        Task<string> TranscribeAudioAsync(Stream audioFile, string fileName);
+        IEnumerable<Conversation> GetAllConvers();
+        Conversation GetConversById(int id);
+        void CreateConvers(Conversation convers);
+        void UpdateConvers(Conversation convers);
+        void DeleteConvers(int id);
     }
 }

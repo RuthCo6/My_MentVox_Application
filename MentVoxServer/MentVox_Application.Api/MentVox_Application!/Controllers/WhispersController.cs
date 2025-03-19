@@ -1,51 +1,38 @@
-﻿using MentVox.Core.Models;
-using Microsoft.AspNetCore.Mvc;
-using MentVox.Core;
+﻿using MentVox.Core.Interfaces;
 using MentVox.Core.Models;
-
-namespace VirtualAdvisorAPI.Controllers
-{
-    [Route("api/[controller]")]
-    [ApiController]
 using Microsoft.AspNetCore.Mvc;
-    using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using MentVox.Core;
+using MentVox.Data;
 
-    namespace VirtualAdvisorAPI.Controllers
+namespace MentVox_Application_.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class WhisperController : ControllerBase
     {
-        [Route("api/[controller]")]
-        [ApiController]
-        public class WhisperController : ControllerBase
+        private readonly IWhisperService _whisperService;
+
+        public WhisperController(IWhisperService whisperService, ApplicationDbContext context)
         {
-            private readonly IWhisperService _whisperService;
-
-            public WhisperController(IWhisperService whisperService)
-            {
-                _whisperService = whisperService;
-            }
-
-            // POST: api/whisper/transcribe
-            [HttpPost("transcribe")]
-            public async Task<ActionResult<string>> TranscribeAudio([FromForm] IFormFile audioFile)
-            {
-                if (audioFile == null || audioFile.Length == 0)
-                {
-                    return BadRequest("Invalid audio file.");
-                }
-
-                var transcription = await _whisperService.TranscribeAudioAsync(audioFile);
-                return Ok(transcription);
-            }
-        }
-    }
-
-    public class WhispersController : ControllerBase
-    {
-        private readonly ApplicationDbContext _context;
-
-        public WhispersController(ApplicationDbContext context)
-        {
+            _whisperService = whisperService;
             _context = context;
         }
+        private readonly ApplicationDbContext _context;
+
+        // POST: api/whisper/transcribe
+        [HttpPost("transcribe")]
+        public async Task<ActionResult<string>> TranscribeAudio([FromForm] Stream audioFile, string fileName)
+        {
+            if (audioFile == null || audioFile.Length == 0)
+            {
+                return BadRequest("Invalid audio file.");
+            }
+
+            var transcription = await _whisperService.TranscribeAudioAsync(audioFile, fileName);
+            return Ok(transcription);
+        }
+
 
         // GET: api/Users
         [HttpGet]

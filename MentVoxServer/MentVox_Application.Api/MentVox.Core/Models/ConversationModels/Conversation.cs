@@ -10,6 +10,8 @@ namespace MentVox.Core.Models.ConversationModels
     {
         public string UserMessage { get; set; }
         public int UserId { get; set; }
+        public int ConversationId { get; set; }
+        public string BotResponse { get; set; }
+        public DateTime CreatedAt { get; set; }
     }
-
 }
