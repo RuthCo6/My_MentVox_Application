@@ -1,4 +1,3 @@
-//using Microsoft.EntityFrameworkCore;
 using MentVox.Core.Interfaces;
 using MentVox.Data;
 using MentVox.Service.Services;
@@ -8,6 +7,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -38,6 +38,28 @@ builder.Services.AddAuthentication(options =>
 
 // הרשמה למחלקה שמפיקה את הטוקן
 builder.Services.AddScoped<JwtTokenGenerator>();
+
+builder.Services.AddSwaggerGen(c =>
+{
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Description = "Enter 'Bearer' [space] and then your token",
+        Name = "Authorization",
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.ApiKey
+    });
+
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement{
+        {
+            new OpenApiSecurityScheme{
+                Reference = new OpenApiReference{
+                    Id = "Bearer",
+                    Type = ReferenceType.SecurityScheme
+                }
+            }, new List<string>()
+        }
+    });
+});
 
 
 // הוספת DbContext עם מחרוזת החיבור

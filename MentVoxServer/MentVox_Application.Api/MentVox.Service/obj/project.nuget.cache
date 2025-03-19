@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "m2ZLwhe7px4MtnoVhrrlUalr9CrMNn9Ky+3LXLW/VQ/rooMal1QW7cC7UEHw+9aylOk2KTNCx8xbYu4qHZT+pQ==",
+  "dgSpecHash": "zSy83F2oLQGeYhibYX9lvcQAYXYVO6mWnZORQGIthUK3PoV24NR4/uLiSqSP6TwqNtRJxd1pSeLwh8bY0B4BnQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\USER\\Downloads\\Mentvox_Application-master\\Mentvox_Application-master\\MentVoxServer\\MentVox_Application.Api\\MentVox.Service\\MentVox.Service.csproj",
+  "projectFilePath": "C:\\Users\\USER\\Desktop\\תכנות שנה ב יוצאים לדרך\\fullstack-application\\MentVoxServer\\MentVox_Application.Api\\MentVox.Service\\MentVox.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",

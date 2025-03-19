@@ -16,7 +16,7 @@ public class AuthController : ControllerBase
     public IActionResult Login([FromBody] LoginModel model)
     {
         // כאן אפשר לשים לוגיקה אמיתית לבדוק את המשתמש בסיסמה
-        if (model.Username == "testuser" && model.Password == "password")
+        if (model.Username == "rcMentVox" && model.Password == "654321")
         {
             var token = _jwtTokenGenerator.GenerateToken(model.Username);
             return Ok(new { Token = token });
