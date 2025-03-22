@@ -1,0 +1,17 @@
+C:\Users\USER\Desktop\תכנות שנה ב יוצאים לדרך\פרקטיקודס\MentVox.Application.Api\MentVox.Service\bin\Debug\net7.0\MentVox.Service.deps.json
+C:\Users\USER\Desktop\תכנות שנה ב יוצאים לדרך\פרקטיקודס\MentVox.Application.Api\MentVox.Service\bin\Debug\net7.0\MentVox.Service.runtimeconfig.json
+C:\Users\USER\Desktop\תכנות שנה ב יוצאים לדרך\פרקטיקודס\MentVox.Application.Api\MentVox.Service\bin\Debug\net7.0\MentVox.Service.dll
+C:\Users\USER\Desktop\תכנות שנה ב יוצאים לדרך\פרקטיקודס\MentVox.Application.Api\MentVox.Service\bin\Debug\net7.0\MentVox.Service.pdb
+C:\Users\USER\Desktop\תכנות שנה ב יוצאים לדרך\פרקטיקודס\MentVox.Application.Api\MentVox.Service\bin\Debug\net7.0\MentVox.Core.dll
+C:\Users\USER\Desktop\תכנות שנה ב יוצאים לדרך\פרקטיקודס\MentVox.Application.Api\MentVox.Service\bin\Debug\net7.0\MentVox.Core.pdb
+C:\Users\USER\Desktop\תכנות שנה ב יוצאים לדרך\פרקטיקודס\MentVox.Application.Api\MentVox.Service\obj\Debug\net7.0\MentVox.Service.csproj.AssemblyReference.cache
+C:\Users\USER\Desktop\תכנות שנה ב יוצאים לדרך\פרקטיקודס\MentVox.Application.Api\MentVox.Service\obj\Debug\net7.0\MentVox.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Desktop\תכנות שנה ב יוצאים לדרך\פרקטיקודס\MentVox.Application.Api\MentVox.Service\obj\Debug\net7.0\MentVox.Service.AssemblyInfoInputs.cache
+C:\Users\USER\Desktop\תכנות שנה ב יוצאים לדרך\פרקטיקודס\MentVox.Application.Api\MentVox.Service\obj\Debug\net7.0\MentVox.Service.AssemblyInfo.cs
+C:\Users\USER\Desktop\תכנות שנה ב יוצאים לדרך\פרקטיקודס\MentVox.Application.Api\MentVox.Service\obj\Debug\net7.0\MentVox.Service.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\תכנות שנה ב יוצאים לדרך\פרקטיקודס\MentVox.Application.Api\MentVox.Service\obj\Debug\net7.0\MentVox.Service.dll
+C:\Users\USER\Desktop\תכנות שנה ב יוצאים לדרך\פרקטיקודס\MentVox.Application.Api\MentVox.Service\obj\Debug\net7.0\refint\MentVox.Service.dll
+C:\Users\USER\Desktop\תכנות שנה ב יוצאים לדרך\פרקטיקודס\MentVox.Application.Api\MentVox.Service\obj\Debug\net7.0\MentVox.Service.pdb
+C:\Users\USER\Desktop\תכנות שנה ב יוצאים לדרך\פרקטיקודס\MentVox.Application.Api\MentVox.Service\obj\Debug\net7.0\MentVox.Service.genruntimeconfig.cache
+C:\Users\USER\Desktop\תכנות שנה ב יוצאים לדרך\פרקטיקודס\MentVox.Application.Api\MentVox.Service\obj\Debug\net7.0\ref\MentVox.Service.dll
+C:\Users\USER\Desktop\תכנות שנה ב יוצאים לדרך\פרקטיקודס\MentVox.Application.Api\MentVox.Service\obj\Debug\net7.0\MentVox..1E538589.Up2Date
