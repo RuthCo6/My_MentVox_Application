@@ -19,37 +19,47 @@ public class AuthController : ControllerBase
     public IActionResult Login([FromBody] LoginModel model)
     {
         // כאן אפשר לשים לוגיקה אמיתית לבדוק את המשתמש בסיסמה
-        if (model.Username == "rcMentVox" && model.Password == "654321")
-        {
-            var token = _jwtTokenGenerator.GenerateToken(model.Username);
-            return Ok(new { Token = token });
-        }
-        return Unauthorized();
+        //if (model.Username == "rcMentVox" && model.Password == "654321")
+        //{
+        //    var token = _jwtTokenGenerator.GenerateToken(model.Username);
+        //    return Ok(new { Token = token });
+        //}
+        //return Unauthorized();
 
-        //var user = _context.Users.FirstOrDefault(u => u.Username == model.Username && u.Password == model.Password);
-        //if (user == null)
-        //    return Unauthorized();
+        var user = _context.Users.FirstOrDefault
+            (u => u.UserName == model.UserName && u.Password == model.Password);
+        if (user == null)
+            return Unauthorized();
 
-        //var token = _jwtTokenGenerator.GenerateToken(user.Username);
-        //return Ok(new { Token = token });
+        var token = _jwtTokenGenerator.GenerateToken(user.UserName);
+        return Ok(new { Token = token });
     }
 
+    [HttpGet("all-users")]
+    public IActionResult GetAllUsers()
+    {
+        var users = _context.Users.ToList();
+        return Ok(users);
+    }
 
     [HttpPost("register")]
     public IActionResult Register([FromBody] LoginModel model)
     {
-        if (_context.Users.Any(u => u.Username == model.Username))
+        //if (!ModelState.IsValid) return BadRequest(ModelState);
+        if (_context.Users.Any(u => u.UserName == model.UserName))
             return BadRequest("Username already exists");
 
         var user = new User
         {
-            Username = model.Username,
-            Password = model.Password
+            UserName = model.UserName,
+            Password = model.Password,
+            Email = model.Email
+            //?? throw new ArgumentException("Email is required")
         };
 
         _context.Users.Add(user);
         _context.SaveChanges();
 
-        return Ok("User registered");
+        return Ok("User registered successfully");
     }
 }

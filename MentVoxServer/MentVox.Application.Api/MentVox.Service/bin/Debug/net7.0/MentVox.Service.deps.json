@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "MentVox.Service/1.0.0": {
         "dependencies": {
+          "AWSSDK.S3": "4.0.0-preview.11",
           "AutoMapper": "9.0.0",
           "MentVox.Core": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.0",
@@ -31,6 +32,25 @@
           "lib/netstandard2.0/AutoMapper.dll": {
             "assemblyVersion": "9.0.0.0",
             "fileVersion": "9.0.0.0"
+          }
+        }
+      },
+      "AWSSDK.Core/4.0.0-preview.11": {
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
+      },
+      "AWSSDK.S3/4.0.0-preview.11": {
+        "dependencies": {
+          "AWSSDK.Core": "4.0.0-preview.11"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.S3.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
           }
         }
       },
@@ -777,10 +797,7 @@
           "Swashbuckle.AspNetCore": "7.0.0"
         },
         "runtime": {
-          "MentVox.Core.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "MentVox.Core.dll": {}
         }
       }
     }
@@ -797,6 +814,20 @@
       "sha512": "sha512-xCqvoxT4HIrNY/xlXG9W+BA/awdrhWvMTKTK/igkGSRbhOhpl3Q8O8Gxlhzjc9JsYqE7sS6AxgyuUUvZ6R5/Bw==",
       "path": "automapper/9.0.0",
       "hashPath": "automapper.9.0.0.nupkg.sha512"
+    },
+    "AWSSDK.Core/4.0.0-preview.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5y+Y89QmBbBq0II7L8ymKHJueA+EiXpzIpXX66CassOqmdNXnTV8ywKzNtI6CzgekouYxow9eJsd7Km2k994pQ==",
+      "path": "awssdk.core/4.0.0-preview.11",
+      "hashPath": "awssdk.core.4.0.0-preview.11.nupkg.sha512"
+    },
+    "AWSSDK.S3/4.0.0-preview.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8Aewec5+uEGsFJnq28GNNjYWzeqPQJqp+dgNu7vwSrNPLw+dR8eyzKf7BRF2DdVtTHQVo+RE4Y+/VeBwIFPK1g==",
+      "path": "awssdk.s3/4.0.0-preview.11",
+      "hashPath": "awssdk.s3.4.0.0-preview.11.nupkg.sha512"
     },
     "Azure.Core/1.24.0": {
       "type": "package",

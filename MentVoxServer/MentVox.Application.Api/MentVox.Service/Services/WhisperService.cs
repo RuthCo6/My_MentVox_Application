@@ -38,37 +38,35 @@ namespace MentVox.Service.Services
         }
         private readonly List<Conversation> _conversations = new List<Conversation>();
 
-        public IEnumerable<Conversation> GetAllConvers()
+        public IEnumerable<Conversation> GetAll()
         {
             return _conversations;
         }
 
-        public Conversation GetConversById(int id)
+        public Conversation GetById(int id)
         {
             return _conversations.FirstOrDefault(c => c.ConversationId == id);
         }
 
-        public void CreateConvers(Conversation convers)
+        public void Create(Conversation convers)
         {
             convers.ConversationId = _conversations.Count + 1; // Assign a new ID
-            convers.CreatedAt = DateTime.UtcNow; // Set the creation time
             _conversations.Add(convers);
         }
 
-        public void UpdateConvers(Conversation convers)
+        public void Update(Conversation convers)
         {
-            var existingItem = GetConversById(convers.ConversationId);
+            var existingItem = GetById(convers.ConversationId);
             if (existingItem != null)
             {
                 existingItem.UserMessage = convers.UserMessage;
                 existingItem.BotResponse = convers.BotResponse;
-                existingItem.CreatedAt = convers.CreatedAt; // Update creation time if needed
             }
         }
 
-        public void DeleteConvers(int id)
+        public void Delete(int id)
         {
-            var item = GetConversById(id);
+            var item = GetById(id);
             if (item != null)
             {
                 _conversations.Remove(item);

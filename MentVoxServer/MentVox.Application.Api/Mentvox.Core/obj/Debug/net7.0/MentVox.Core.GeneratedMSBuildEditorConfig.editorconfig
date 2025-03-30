@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MentVox.Core
-build_property.ProjectDir = C:\Users\USER\Desktop\תכנות שנה ב יוצאים לדרך\פרקטיקודס\MentVox.Application.Api\Mentvox.Core\
+build_property.ProjectDir = C:\Users\USER\Desktop\תכנות שנה ב יוצאים לדרך\fullstack-application\MentVoxServer\MentVox.Application.Api\Mentvox.Core\

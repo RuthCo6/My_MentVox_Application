@@ -6,9 +6,9 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace MentVox.Core.Mappings
 {
-    public class MappingProfile : Profile
+    public class ConversationProfile : Profile
     {
-        public MappingProfile()
+        public ConversationProfile()
         {
             //CreateMap<User, UserDto>().ReverseMap();
             //CreateMap<Conversation, ConversationDto>().ReverseMap();

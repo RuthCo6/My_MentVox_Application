@@ -18,13 +18,6 @@ namespace MentVox.Data
             : base(options)
         {
         }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Data Source = DESKTOP-P6FFS03; Initial Catalog = MentVox.Application; Integrated Security = true; Trusted_Connection = SSPI; MultipleActiveResultSets = true; TrustServerCertificate = true;",
-                options =>
-                options.MigrationsAssembly("MentVox.Application"));
-        }
     }
 }
 

@@ -17,18 +17,18 @@ namespace MentVox.Service.Services
     {
         private readonly HttpClient _httpClient;
         private readonly string _apiKey;
-        private readonly ConversationService _conversationService;
+        private readonly IConversationService _conversationService;
 
-        public ChatGptService(HttpClient httpClient,IConfiguration configuration, ConversationService conversationService)
+        public ChatGptService(HttpClient httpClient, IConfiguration configuration, IConversationService conversationService)
         {
             _httpClient = httpClient;
             _apiKey = configuration["OpenAIApiKey"];
             _conversationService = conversationService;
         }
 
-        public IEnumerable<Conversation> GetAllConvers() => _conversationService.GetAll();
+        public IEnumerable<Conversation> GetAllConvers() => _conversationService.GetAllConvers();
 
-        public Conversation GetConversById(int id) => _conversationService.GetById(id);
+        public Conversation GetConversById(int id) => _conversationService.GetConversById(id);
 
         public void CreateConvers(Conversation convers) => _conversationService.Add(convers);
 

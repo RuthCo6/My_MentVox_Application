@@ -1,8 +1,10 @@
 ﻿using MentVox.Core.DTOs;
 using MentVox.Core.Interfaces;
 using MentVox.Core.Models.ConversationModels;
+using MentVox.Data;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace MentVox_Application_.Controllers
 {
@@ -10,24 +12,26 @@ namespace MentVox_Application_.Controllers
     [Route("api/[controller]")]
     public class ConversationController : Controller
     {
-        private readonly IWhisperService _whisperService;
+        private readonly IConversationService _conversationService;
+        private readonly ApplicationDbContext _context; // הוספתי יוניט אוף וורק לשמירת נתונים
 
-        public ConversationController(IWhisperService whisperService)
+        public ConversationController(IConversationService conversService, ApplicationDbContext context)
         {
-            _whisperService = whisperService;
+            _conversationService = conversService;
+            _context = context;
         }
 
         [HttpGet]
         public IActionResult GetAll()
         {
-            var items = _whisperService.GetAllConvers();
+            var items = _conversationService.GetAllConvers();
             return Ok(items);
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public IActionResult GetConversById(int id)
         {
-            var item = _whisperService.GetConversById(id);
+            var item = _conversationService.GetConversById(id);
             if (item == null)
             {
                 return NotFound();
@@ -42,8 +46,10 @@ namespace MentVox_Application_.Controllers
             {
                 return BadRequest();
             }
-            _whisperService.CreateConvers(convers);
-            return CreatedAtAction(nameof(GetById), new { id = convers.UserId }, convers);
+            _context.Conversations.Add(convers); // ודאי שמשתמשים ב-DbContext להוספה
+            _context.SaveChanges(); // 🔥 שומר את השינויים
+
+            return CreatedAtAction(nameof(GetConversById), new { id = convers.UserId }, convers);
         }
 
         [HttpPut("{id}")]
@@ -54,39 +60,31 @@ namespace MentVox_Application_.Controllers
                 return BadRequest();
             }
 
-            var existingItem = _whisperService.GetConversById(id);
+            var existingItem = _conversationService.GetConversById(id);
             if (existingItem == null)
             {
                 return NotFound();
             }
 
-            _whisperService.UpdateConvers(convers);
+            _conversationService.Update(convers);
+            _context.SaveChanges(); // 🔥 חובה לשמור אחרי עדכון
+
             return NoContent();
         }
 
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            var item = _whisperService.GetConversById(id);
+            var item = _conversationService.GetConversById(id);
             if (item == null)
             {
                 return NotFound();
             }
 
-            _whisperService.DeleteConvers(id);
+            _conversationService.Delete(id);
+            _context.SaveChanges(); // 🔥 מחיקה צריכה להיות מאושרת במסד נתונים
+
             return NoContent();
         }
     }
-
-    //[HttpPost("transcribe")]
-    //public async Task<IActionResult> TranscribeAudio(IFormFile audioFile)
-    //{
-    //    if (audioFile == null || audioFile.Length == 0)
-    //        return BadRequest("No file provided.");
-
-    //    using var stream = audioFile.OpenReadStream();
-    //    var transcription = await _whisperService.TranscribeAudioAsync(stream, audioFile.FileName);
-
-    //    return Ok(new WhisperResponseDto { Transcription = transcription });
-    //}
 }

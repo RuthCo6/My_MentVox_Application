@@ -8,5 +8,8 @@ namespace MentVox.Core.DTOs
 {
     public class ChatGptResponseDto
     {
+        public string BotResponse { get; set; }
+        public DateTime ResponseTime { get; set; }
+        public string Error { get; set; } // במקרה של שגיאה
     }
 }

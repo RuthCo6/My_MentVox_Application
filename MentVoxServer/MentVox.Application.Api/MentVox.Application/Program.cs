@@ -1,3 +1,5 @@
+ο»Ώusing Amazon.S3;
+using Amazon.Extensions.NETCore.Setup;
 using MentVox.Core.Interfaces;
 using MentVox.Data;
 using MentVox.Service.Services;
@@ -12,15 +14,25 @@ using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using AutoMapper;
+using MentVox.Core.Mappings;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// ΧΧΆΧ™Χ Χª Χ”Χ’Χ“Χ¨Χ•Χª AWS ΧΧ”-Configuration
+builder.Services.AddDefaultAWSOptions(builder.Configuration.GetAWSOptions());
+builder.Services.AddAWSService<IAmazonS3>(); // π”¥ Χ”Χ•Χ΅Χ¤Χª Χ©Χ™Χ¨Χ•Χª S3
+
+
+
+builder.Services.AddAutoMapper(typeof(ConversationProfile));
 
 builder.Services.AddScoped<IWhisperService, WhisperService>(); 
 builder.Services.AddScoped<IChatGptService, ChatGptService>(); 
 builder.Services.AddScoped<IElevenLabsService, ElevenLabsService>(); 
-builder.Services.AddScoped<ConversationService, ConversationService>(); 
+builder.Services.AddScoped<IConversationService, ConversationService>();
 
+builder.Services.AddScoped<ConversationService>();
 
 
 // Configure JWT Authentication
@@ -48,7 +60,7 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-// δψωξδ μξημχδ ωξτιχδ ΰϊ δθεχο
+// Χ”Χ¨Χ©ΧΧ” ΧΧΧ—ΧΧ§Χ” Χ©ΧΧ¤Χ™Χ§Χ” ΧΧª Χ”ΧΧ•Χ§Χ
 builder.Services.AddScoped<JwtTokenGenerator>();
 
 builder.Services.AddSwaggerGen(c =>
@@ -73,21 +85,23 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
-// δερτϊ DbContext ςν ξηψεζϊ δηιαεψ
+
+// Χ”Χ•Χ΅Χ¤Χª DbContext ΧΆΧ ΧΧ—Χ¨Χ•Χ–Χª Χ”Χ—Χ™Χ‘Χ•Χ¨
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseSqlServer("Data Source = DESKTOP-P6FFS03; Initial Catalog = MentVox.Application; Integrated Security = true; Trusted_Connection = SSPI; MultipleActiveResultSets = true; TrustServerCertificate = true;");
 });
+
 // Add services to the container.
 
 builder.Services.AddControllers();
-// δερτϊ HttpClient ςαεψ ElevenLabsService
+// Χ”Χ•Χ΅Χ¤Χª HttpClient ΧΆΧ‘Χ•Χ¨ ElevenLabsService
 builder.Services.AddHttpClient<ElevenLabsService>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 
-var app = builder.Build();
 
+var app = builder.Build();
 
 app.UseAuthentication();
 
