@@ -1,0 +1,14 @@
+<div>
+    <h2>Login</h2>
+    <input type="text" [(ngModel)]="username" placeholder="Username">
+    <input type="password" [(ngModel)]="password" placeholder="Password">
+    <button (click)="addUser()">Login</button>
+  
+    <h3>Users</h3>
+    <ul>
+      <li *ngFor="let user of users; let i = index">
+        {{ user.username }} <button (click)="deleteUser(i)">Delete</button>
+      </li>
+    </ul>
+  </div>
+  

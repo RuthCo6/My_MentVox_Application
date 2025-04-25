@@ -1,0 +1,14 @@
+<h2>ניהול משתמשים</h2>
+
+<form (ngSubmit)="addUser()">
+  <input [(ngModel)]="newUser.name" name="name" placeholder="שם" required>
+  <input [(ngModel)]="newUser.email" name="email" placeholder="אימייל" required>
+  <button type="submit">הוסף משתמש</button>
+</form>
+
+<ul>
+  <li *ngFor="let user of users">
+    {{ user.name }} ({{ user.email }})
+    <button (click)="deleteUser(user.id)">מחק</button>
+  </li>
+</ul>
