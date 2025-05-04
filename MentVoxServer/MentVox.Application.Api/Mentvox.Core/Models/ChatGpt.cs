@@ -8,8 +8,8 @@ namespace MentVox.Core.Models
 {
     public class ChatGpt
     {
+        public string UserName { get; set; }
         public string UserMessage { get; set; }
-        public int UserId { get; set; }
         public string BotResponse { get; set; }
         public DateTime ResponseTime { get; set; }
     }

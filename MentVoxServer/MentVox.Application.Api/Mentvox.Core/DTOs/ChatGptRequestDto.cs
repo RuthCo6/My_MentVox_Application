@@ -8,7 +8,7 @@ namespace MentVox.Core.DTOs
 {
     public class ChatGptRequestDto
     {
+        public string UserName { get; set; }
         public string UserMessage { get; set; }
-        public int UserId { get; set; }
     }
 }
